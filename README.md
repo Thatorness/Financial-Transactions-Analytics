@@ -14,7 +14,6 @@ The dataset consists of
    - Card brands, Card type, Number of cards issueed, expiration date etc..
 
 ## Problem Statement
----
 Financial institutions face significant challenges in detecting fraud, profiling customer risk, and understanding account acquisition trends. This project leverages transactional, demographic, and financial data to uncover hidden patterns and provide actionable insights across four key areas:
 
 #### 1. Fraud Detection
@@ -38,7 +37,7 @@ Financial institutions face significant challenges in detecting fraud, profiling
 - Analyse top regions by number of accounts opened per year.
 - Investigate the drivers behind spikes in new account openings, providing insights for marketing and strategic expansion.
 
-  ## Data Description
+  ## Data Description 
 ### 1. User Data
 Contains demographic and financial information about each customer.
 - Client ID – Unique identifier for the customer.
@@ -90,8 +89,6 @@ Contains details of payment cards issued to customers.
 - Year of Last Pin change – Last year the PIN was updated.
 - Card on Dark web – Flag showing if the card has appeared in known breaches.
 
----
-
 ## Approach / Methodology
 
 Step 1: Data cleaning & joining (transactions + cards + users).
@@ -107,6 +104,7 @@ Step 2: Exploratory Data Analysis: Categorized transactions into
   -  Non Fraud - Customer issue and Genuine declined transactions
 
 Step 3: Visualisation in Power BI (top fraud clients, fraud by location, transaction amounts, etc..).
+
 
 ## Result
 Key Insights
