@@ -1,6 +1,6 @@
 # Financial Transactions Analysis
 ---
-The dataset analysed basically to understand user's behaviour through transactions initiated, detect fraudulent transactions by individuals across regions
+The dataset analyzed basically to understand user's behavior through transactions initiated, detect fraudulent transactions by individuals across regions
 The dataset consists of
 
  - User's data 
@@ -11,7 +11,7 @@ The dataset consists of
    - Features transaction types, amounts, and merchant location
    - Time and Date, Declined transactions error messages, Transaction Channels etc..
  - Cards data -
-   - Card brands, Card type, Number of cards issueed, expiration date etc..
+   - Card brands, Card type, Number of cards issued, expiration date etc..
 
 ## Problem Statement
 Financial institutions face significant challenges in detecting fraud, profiling customer risk, and understanding account acquisition trends. This project leverages transactional, demographic, and financial data to uncover hidden patterns and provide actionable insights across four key areas:
@@ -42,20 +42,21 @@ Financial institutions face significant challenges in detecting fraud, profiling
 Contains demographic and financial information about each customer.
 - Client ID – Unique identifier for the customer.
 - Current Age – Current age of the customer.
-- Age Group - Under 30 is less than 30 years old, less than 50 years is middle aged, above 50 years is old.
+- Age Group - Under 30 = Young, 30–49 = Middle-aged, 50+ = Old.
 - Retirement Age – Expected retirement age.
 - Years to Retirement (Y2R) - Number of years left to retirement age
-- Y2R Grouping - Less than 0 is retired, less than 30 mid career, above 30 years is early career
+- Y2R Grouping - Less than 0 = Retired, 0–29 = Mid-career, 30+ = Early-career.
 - Birth Year / Birth Month – Birth details.
 - Gender – Gender of the customer.
 - Address – Customer’s primary address.
 - Latitude / longitude – Geolocation of the address.
 - Per Capita Income – Income per household member in customer’s area.
-- Per Capita Grouping - less than $25k low, less than $45k medium, above $40k is high.
+- Per Capita Grouping - < $25K = Low, $25K–$44.9K = Medium, ≥ $45K = High.
 - Yearly Income – Annual income of the customer.
 - Total Debt – Outstanding debt held by the customer.
 - Debt to Income Ratio: A customer's ability to repay current debt based on yearly income
 - Credit Score – Credit rating of the customer.
+- Credit Grouping - <580 = Low, 580–699 = Medium, ≥700 = High.
 - Number of Credit Cards – Total number of credit cards owned.
 
 ### 2. Transactions Data
@@ -68,7 +69,7 @@ Captures 13M unique financial transactions made using cards.
 - Transaction Channel – Either Swipe, Chip or Online transaction.
 - Merchant Id – Unique identifier of the merchant.
 - Merchant City – City where the transaction occurred.
-- merchant_state – State where the transaction occurred.
+- Merchant State – State where the transaction occurred.
 - Zip – ZIP code of the merchant location.
 - Mcc – Merchant Category Code (type of business).
 - Errors – Transaction errors, (e.g., declined, insufficient funds).
@@ -97,7 +98,7 @@ Step 2: Exploratory Data Analysis: Categorized transactions into
   -  Successful: Transactions without error messages
   -  Genuine declined transactions: Transactions declined due to technical glitch
   -  Customer issue: Transactions declined due to insufficient balance
-  -  Attempted fraud: Transsactions carried out via chip, swipe and online with error message with keywords such as Bad card number, Bad CVV, Bad Expiration, and Bad Zip code
+  -  Attempted fraud: Transactions carried out via chip, swipe and online with error message with keywords such as Bad card number, Bad CVV, Bad Expiration, and Bad Zip code
   -  Medium risk transaction: Chip and swipe transactions with Bad Pin, there weren't online transactions with Bad Pin in the dataset.
      -   Further categorized into:
   -  Fraud - Attempted and Medium risk
@@ -111,10 +112,23 @@ Key Insights
 
 From exploratory analysis and Power BI dashboards:
 
-Fraud Patterns: Most fraudulent transactions occurred during late-night hours were associated with unusual merchant locations outside the customer’s normal region.
+- Fraud Patterns: Most fraudulent transactions occurred during late-night hours were associated with unusual merchant locations outside the customer’s normal region.
 
-Transaction Behaviour: Fraudulent transactions often had higher-than-normal amounts compared to the client’s historical average.
+- Transaction Behaviour: Fraudulent transactions often had higher-than-normal amounts compared to the client’s historical average.
 
-Top Clients / Regions: A small subset of clients accounted for a disproportionately high number of flagged transactions. Certain regions showed clusters of suspicious activity.
+- Top Clients / Regions: A small subset of clients accounted for a disproportionately high number of flagged transactions. Certain regions showed clusters of suspicious activity.
 
-Customer Profiling: Customers with higher debt-to-income ratios and lower credit scores were more likely to exhibit risky transaction behaviour.
+- Customer Profiling: Customers with higher debt-to-income ratios and lower credit scores were more likely to exhibit risky transaction behaviour.
+
+- Account Acquisition: The spike in 2020 was largely driven by younger demographics. This trend may be linked to increased employment opportunities in the regions, which could have enhanced financial inclusion and encouraged new account openings
+
+## Conclusion
+Fraud rates have been effectively controlled, with only 0.4% of transactions identified as fraudulent over the past nine years.
+
+- A notable pattern of North American workers migrating to Europe was observed, as many clients reported registered addresses in North America.
+
+- Online transactions continue to be the most vulnerable to fraudulent activity.
+
+- The high debt-to-income ratio, particularly in Sweden, suggests either unusually low per capita income or excess liquidity in the region.
+
+---
