@@ -16,7 +16,7 @@ The dataset consists of
 ## Problem Statement
 Financial institutions face significant challenges in detecting fraud, profiling customer risk, and understanding account acquisition trends. This project leverages transactional, demographic, and financial data to uncover hidden patterns and provide actionable insights across four key areas:
 
-#### 1. Fraud Detection
+### 1. Fraud Detection
 
 - Identify suspicious customers with a high number of fraud flags.
 - Detect regions with high volumes of fraudulent transactions.
